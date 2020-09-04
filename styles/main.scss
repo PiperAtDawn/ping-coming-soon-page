@@ -45,12 +45,14 @@ body {
     align-items: center;
     padding-left: 5vw;
     padding-right: 5vw;
-    padding-top: 15vh;
+    padding-top: 5vh;
     font-size: 20px;
+    min-width: 300px;
 
     @include desktop {
         padding-left: 20vw;
         padding-right: 20vw;
+        padding-top: 86px;
     }
 
     #dashboard {
@@ -105,6 +107,10 @@ body {
             height: 80px;
             border-radius: 50px;
             width: 100%;
+
+            @include small {
+                height: 50px;
+            }
         }
 
         .input-and-error {
@@ -124,6 +130,15 @@ body {
                 font-style: italic;
                 color: color(light-red);
                 display: none;
+
+                @include small {
+                    font-size: 1rem;
+                }
+
+                @include desktop {
+                    text-align: left;
+                    padding-left: 50px;
+                }
             }
 
             .error-msg.error {
@@ -156,6 +171,11 @@ body {
             font-size: 1.6rem;
             color: white;
             margin-top: 20px;
+            box-shadow: 0px 15px 40px -18px color(blue);
+
+            @include small {
+                font-size: 1.2rem;
+            }
 
             @include desktop {
                 margin-top: 0;
